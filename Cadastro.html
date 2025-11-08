@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - ECO-WEB</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('images/FlorestaIA.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: rgba(27, 77, 46, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      color: white;
+      text-align: center;
+    }
+
+    /* ===== LOGO ECO-WEB ===== */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #3ad7ff;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    /* ===== Espaço para imagem da arara ===== */
+    .logo-img {
+      width: 50px;  /* Tamanho da imagem */
+      height: 50px;
+      object-fit: contain;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 5px;
+      box-shadow: 0 0 8px rgba(58, 215, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(58, 215, 255, 0.7);
+    }
+
+    /* ===== Arara Azul em CSS (opcional) ===== */
+    .arara {
+      position: relative;
+      width: 50px;
+      height: 35px;
+    }
+
+    .arara .corpo {
+      width: 35px;
+      height: 22px;
+      background: linear-gradient(90deg, #0077ff, #00bfff);
+      border-radius: 40% 60% 60% 40%;
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+    }
+
+    .arara .cabeca {
+      width: 16px;
+      height: 16px;
+      background: #00bfff;
+      border-radius: 50%;
+      position: absolute;
+      top: -2px;
+      right: 0;
+    }
+
+    .arara .bico {
+      width: 0;
+      height: 0;
+      border-left: 7px solid #f2b705;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      position: absolute;
+      top: 3px;
+      right: -6px;
+    }
+
+    .arara .asa {
+      width: 22px;
+      height: 12px;
+      background-color: #0055cc;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 5px;
+      left: 4px;
+      transform-origin: top center;
+      animation: baterAsa 2s ease-in-out infinite;
+    }
+
+    .arara .olho {
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      right: 4px;
+    }
+
+    @keyframes baterAsa {
+      0%, 100% { transform: rotate(-15deg); }
+      50% { transform: rotate(15deg); }
+    }
+
+    /* ===== Formulário ===== */
+    h2 {
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: 500;
+      color: #cce3d4;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0e2918;
+      color: white;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    input::placeholder {
+      color: #a3c4b4;
+    }
+
+    input:focus {
+      outline: 2px solid #3ad7ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3ad7ff;
+      border: none;
+      border-radius: 8px;
+      color: #0e2918;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00bfff;
+    }
+
+    .social-buttons {
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .google { background-color: #fff; color: #333; }
+    .facebook { background-color: #1877f2; color: #fff; }
+
+    .social-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .social-btn:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .divider {
+      margin: 15px 0;
+      color: #cce3d4;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #cce3d4;
+    }
+
+    .divider::before { left: 0; }
+    .divider::after { right: 0; }
+
+    .login-link {
+      margin-top: 15px;
+      color: #cce3d4;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #3ad7ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      ECO-WEB
+      <!-- Espaço para a imagem da arara azul -->
+      <img src="images/ChatGPT Image 8 de nov. de 2025, 18_21_57.png" alt="Logo Arara Azul" class="logo-img">
+    </div>
+
+    <h2>Criar conta</h2>
+    <form action="#" method="post">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+
+      <label for="confirmar">Confirmar senha</label>
+      <input type="password" id="confirmar" name="confirmar" placeholder="Repita sua senha" required>
+
+      <button type="submit">Cadastrar</button>
+
+      <div class="divider">ou</div>
+
+      <div class="social-buttons">
+        <button class="social-btn google">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google">
+          Cadastrar com Google
+        </button>
+        <button class="social-btn facebook">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook">
+          Cadastrar com Facebook
+        </button>
+      </div>
+
+      <div class="login-link">
+        Já tem uma conta? <a href="login.html">Entrar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
