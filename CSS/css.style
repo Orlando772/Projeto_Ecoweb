@@ -1,0 +1,28 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-box {
+  border: 2px solid #4CAF50; /* cor da borda */
+  padding: 20px;
+  border-radius: 10px; /* opcional, para cantos arredondados */
+  text-align: center;
+  width: 200px; /* ajusta o tamanho dos quadrados */
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-box {
+  border: 2px solid #4CAF50; /* cor da borda */
+  padding: 20px;
+  border-radius: 10px; /* opcional, para cantos arredondados */
+  text-align: center;
+  width: 200px; /* ajusta o tamanho dos quadrados */
+}
