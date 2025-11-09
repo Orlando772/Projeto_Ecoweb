@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja - ECO-WEB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f8f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #2e7d32;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a5d6a7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1b5e20;
+      font-size: 1.8rem;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      color: #2e7d32;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-weight: bold;
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    .botao {
+      display: inline-block;
+      background-color: #43a047;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #2e7d32;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌿 Loja ECO-WEB 🌿</h1>
+    <p>Produtos sustentáveis que ajudam o planeta</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <a href="ecoplus.html">EcoPlus+</a>
+    <a href="loja.html">Loja</a>
+  </nav>
+
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos">
+
+      <div class="card">
+        <img src="images/camiseta_verde.jpg" alt="Camiseta Eco Verde">
+        <div class="card-content">
+          <h3>Camiseta Eco Verde</h3>
+          <p>Tecido 100% reciclado e super confortável.</p>
+          <div class="preco">R$ 59,90</div>
+          <a href="#" class="botao">Adicionar ao carrinho</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/caneca_eco.jpg" alt="Caneca Sustentável">
+        <div class="card-content">
+          <h3>Caneca ECO-WEB</h3>
+          <p>Feita com materiais biodegradáveis e design exclusivo.</p>
+          <div class="preco">R$ 29,90</div>
+          <a href="#" class="botao">Adicionar ao carrinho</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/eco_bag.jpg" alt="Eco Bag">
+        <div class="card-content">
+          <h3>Eco Bag ECO-WEB</h3>
+          <p>Leve, durável e ideal para o dia a dia sustentável.</p>
+          <div class="preco">R$ 39,90</div>
+          <a href="#" class="botao">Adicionar ao carrinho</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 ECO-WEB | Promovendo um futuro mais verde 🌎</p>
+  </footer>
+
+</body>
+</html>

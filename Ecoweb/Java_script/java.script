@@ -1,0 +1,45 @@
+const cadastroForm = document.getElementById("cadastroForm");
+  const loginForm = document.getElementById("loginForm");
+  const msgCadastro = document.getElementById("mensagemCadastro");
+  const msgLogin = document.getElementById("mensagemLogin");
+
+  const irLogin = document.getElementById("irLogin");
+  const irCadastro = document.getElementById("irCadastro");
+
+  // Trocar entre telas
+  irLogin.addEventListener("click", () => {
+    cadastroForm.classList.add("hidden");
+    loginForm.classList.remove("hidden");
+  });
+
+  irCadastro.addEventListener("click", () => {
+    loginForm.classList.add("hidden");
+    cadastroForm.classList.remove("hidden");
+  });
+
+  // Cadastro — redireciona imediatamente após cadastro
+  cadastroForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msgCadastro.style.display = "block";
+    msgCadastro.textContent = "Cadastro realizado com sucesso! Redirecionando...";
+    window.location.href = "index.html"; // redireciona imediatamente
+  });
+
+  // Login — mantém o redirecionamento rápido (1,5s)
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msgLogin.style.display = "block";
+    msgLogin.textContent = "Login realizado com sucesso! Redirecionando...";
+    setTimeout(() => window.location.href = "index.html", 1500);
+  });
+
+  // Google Login/Cadastro simulado
+  document.getElementById("googleCadastro").addEventListener("click", () => {
+    alert("✅ Cadastro via Google concluído com sucesso!");
+    window.location.href = "index.html";
+  });
+
+  document.getElementById("googleLogin").addEventListener("click", () => {
+    alert("✅ Login via Google realizado com sucesso!");
+    window.location.href = "index.html";
+  });

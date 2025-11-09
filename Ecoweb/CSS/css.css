@@ -1,0 +1,54 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-box {
+  border: 2px solid #4CAF50; /* cor da borda */
+  padding: 20px;
+  border-radius: 10px; /* opcional, para cantos arredondados */
+  text-align: center;
+  width: 200px; /* ajusta o tamanho dos quadrados */
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-box {
+  border: 2px solid #4CAF50; /* cor da borda */
+  padding: 20px;
+  border-radius: 10px; /* opcional, para cantos arredondados */
+  text-align: center;
+  width: 200px; /* ajusta o tamanho dos quadrados */
+}
+.text {
+      flex: 1;
+      max-width: 600px;
+      animation: fadeIn 1.2s ease forwards;
+}
+ .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+.logo img {
+      width: 55px;
+      transition: transform 0.3s ease;
+    }
+
+.logo img:hover {
+      transform: rotate(-5deg) scale(1.05);
+    }
+
+.logo h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e8fbe3;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
