@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECO-WEB</title>
+  <title>Sobre - ECO-WEB</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -94,12 +94,12 @@
       padding: 100px 10%;
       gap: 40px;
       min-height: 80vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('images/plano_de_fundo.png') center/cover no-repeat;
       border-radius: 0 0 20px 20px;
       margin: 0 auto 60px;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .text {
@@ -108,14 +108,17 @@
       animation: fadeIn 1.2s ease forwards;
     }
 
-    .text p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #eafaea;
+    .text h2 {
+      font-size: 2rem;
+      color: #a4e4b0;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .text strong {
-      color: #a4e4b0;
+    .text p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #eafaea;
     }
 
     .btn {
@@ -151,7 +154,7 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
+      0%,100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
 
@@ -159,13 +162,14 @@
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <img src="images/Arara_branca.png" alt="Logo EcoWeb">
+      <img src="Images/Arara_branca.png" alt="Logo EcoWeb">
       <h1>ECO-WEB</h1>
     </div>
 
@@ -174,7 +178,7 @@
         <li><a href="index.html">Início</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a href="assinatura.html">Assinatura</a></li> <!-- substituído -->
+        <li><a href="assinatura.html">Assinatura</a></li>
         <li><a href="loja.html">Loja</a></li>
       </ul>
     </nav>
@@ -182,10 +186,11 @@
 
   <main>
     <div class="text">
-      <p>
-        A <strong>EcoWeb</strong> é uma iniciativa focada no meio ambiente, com o principal objetivo de conscientizar e educar sobre os temas ambientais.
-        Criada por um grupo de estudantes, acreditamos em um mundo mais sustentável e melhor para todos.
-      </p>
+      <h2>Nossa História</h2>
+      <p>A <strong>ECO-WEB</strong> nasceu do sonho de um grupo de estudantes apaixonados pelo meio ambiente. Em 2023, percebemos que muitas pessoas queriam adotar hábitos mais sustentáveis, mas não sabiam por onde começar ou como escolher produtos que realmente ajudassem o planeta.</p>
+      <p>Com esse objetivo, criamos uma plataforma que conecta consumidores conscientes a produtos sustentáveis, educativos e inovadores. Desde camisetas feitas com materiais reciclados até canecas biodegradáveis e eco-brindes, nossa missão é tornar o consumo sustentável mais acessível e prático para todos.</p>
+      <p>Além de oferecer produtos eco-friendly, a ECO-WEB também promove <strong>projetos educativos</strong>, workshops e campanhas de conscientização ambiental, incentivando escolas e comunidades a adotarem práticas mais verdes.</p>
+      <p>Cada compra, cada assinatura e cada ação da ECO-WEB reflete nosso compromisso com um mundo mais saudável, equilibrado e consciente. Acreditamos que pequenas mudanças podem gerar grandes impactos, e queremos que você faça parte dessa transformação junto conosco.</p>
       <a href="loja.html" class="btn">Visite Nossa Loja</a>
     </div>
 

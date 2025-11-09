@@ -26,3 +26,41 @@ footer {
   text-align: center;
   width: 200px; /* ajusta o tamanho dos quadrados */
 }
+h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #2e7d32; /* Tom mais vivo de verde */
+  font-size: 2.2rem; /* Um pouco maior */
+  font-weight: 700; /* Mais negrito */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  text-transform: uppercase; /* Letras maiúsculas */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+.card {
+  background-color: #e8f5e9; /* Verde clarinho de fundo */
+  border: 2px solid #2e7d32; /* Borda verde escura */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  border-color: #43a047; /* Muda a borda para verde mais vivo no hover */
+}
+
+.card-content h3 {
+  color: #1b5e20; /* Verde escuro para título */
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-weight: bold;
+  color: #2e7d32; /* Verde escuro */
+  margin-bottom: 15px;
+  font-size: 1.15rem;
+}
+

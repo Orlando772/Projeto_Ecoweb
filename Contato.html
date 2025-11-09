@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja - ECO-WEB</title>
+  <title>Contato - ECO-WEB</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,7 +14,6 @@
                   url('images/plano_de_fundo.png') center/cover no-repeat;
       color: #fff;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
@@ -22,11 +21,11 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 60px;
-      background: rgba(25, 58, 30, 0.95);
+      background: rgba(25,58,30,0.95);
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
     .logo {
@@ -87,7 +86,7 @@
     }
 
     main {
-      max-width: 1200px;
+      max-width: 800px;
       margin: 80px auto 60px;
       padding: 0 20px;
     }
@@ -96,77 +95,54 @@
       text-align: center;
       font-size: 2.2rem;
       color: #a4e4b0;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      justify-items: center;
-    }
-
-    .card {
-      background-color: #f3f3f3;
+    form {
+      background-color: #e8f5e9;
       color: #1b5e20;
-      border: 2px solid #2e7d32;
+      padding: 30px;
       border-radius: 12px;
-      overflow: hidden;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 280px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    form label {
+      font-weight: 600;
+      color: #2e7d32;
     }
 
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    .card-content p {
+    form input, form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #2e7d32;
       font-size: 1rem;
-      margin-bottom: 15px;
-      min-height: 45px;
     }
 
-    .preco {
-      font-weight: bold;
-      font-size: 1.15rem;
-      margin-bottom: 15px;
-    }
-
-    .botao {
-      display: inline-block;
+    form button {
       background-color: #43a047;
       color: white;
       padding: 12px 25px;
       border-radius: 8px;
       font-weight: 600;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: background-color 0.3s, transform 0.3s;
     }
 
-    .botao:hover {
+    form button:hover {
       background-color: #66bb6a;
       transform: translateY(-2px);
+    }
+
+    .info {
+      margin-top: 40px;
+      text-align: center;
+      color: #fff;
+      line-height: 1.8;
     }
 
     footer {
@@ -178,10 +154,8 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 1.6rem; }
-      h2 { font-size: 1.5rem; }
+      h2 { font-size: 1.8rem; }
       nav ul { gap: 15px; }
-      .card-content h3 { font-size: 1.2rem; }
-      .preco { font-size: 1rem; }
     }
   </style>
 </head>
@@ -205,39 +179,25 @@
   </header>
 
   <main>
-    <h2>Nossos Produtos</h2>
-    <section class="produtos">
+    <h2>Fale Conosco</h2>
 
-      <article class="card">
-        <img src="images/Camisa_Ecoweb.png" alt="Camiseta Eco Verde">
-        <div class="card-content">
-          <h3>Camiseta Eco Verde</h3>
-          <p>Tecido 100% reciclado e super confortável.</p>
-          <div class="preco">R$ 59,90</div>
-          <a href="#" class="botao">Adicionar ao carrinho</a>
-        </div>
-      </article>
+    <form>
+      <label>Nome:</label>
+      <input type="text" placeholder="Seu nome">
 
-      <article class="card">
-        <img src="images/caneco_Ecoweb.png" alt="Caneca Sustentável ECO-WEB">
-        <div class="card-content">
-          <h3>Caneca ECO-WEB</h3>
-          <p>Feita com materiais biodegradáveis e design exclusivo.</p>
-          <div class="preco">R$ 29,90</div>
-          <a href="#" class="botao">Adicionar ao carrinho</a>
-        </div>
-      </article>
+      <label>E-mail:</label>
+      <input type="email" placeholder="seuemail@exemplo.com">
 
-      <article class="card">
-        <img src="images/mochila.png" alt="Eco Bag ECO-WEB">
-        <div class="card-content">
-          <h3>Eco Bag ECO-WEB</h3>
-          <p>Leve, durável e ideal para o dia a dia sustentável.</p>
-          <div class="preco">R$ 39,90</div>
-          <a href="#" class="botao">Adicionar ao carrinho</a>
-        </div>
-      </article>
+      <label>Mensagem:</label>
+      <textarea placeholder="Digite sua mensagem..." rows="5"></textarea>
 
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <section class="info">
+      <p><strong>Telefone:</strong> (11) 4002-8922</p>
+      <p><strong>Email:</strong> MininusEcoweb@gmail.com.br</p>
+      <p><strong>Endereço:</strong> Rua Morioh, 318 - São Paulo, SP</p>
     </section>
   </main>
 
